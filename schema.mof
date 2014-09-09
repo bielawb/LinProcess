@@ -1,0 +1,15 @@
+class Lin_Process
+{
+  [Key] Uint32 PID;
+  Uint32 ParentID;
+  Uint64 VmSize;
+  Uint64 VmHWM;
+  String cmdline;
+  String exe;
+  String Name;
+  String State;
+  Uint32 OwnerID;
+  Uint32 Kill (
+    [In] Uint32 sig
+  );
+};
