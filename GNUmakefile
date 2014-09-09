@@ -1,4 +1,5 @@
-include /opt/omi/share/omi.mak
+OMI = $(shell find / -name omi.mak -print -quit 2> /dev/null)
+include $(OMI)
 
 PROVIDER = Process
 SOURCES = $(wildcard *.c *.cpp)
